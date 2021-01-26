@@ -1,8 +1,19 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import mongoose, { mongo } from 'mongoose';
 
 const app = express();
+
+//data base connection
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/Serviciosdb', {useNewUrlParser: true ,useCreateIndex: true,useUnifiedTopology: true }).then(mongoose => {
+    console.log('Coneccion excitosa a la base de datos');
+}).catch(error =>{
+    console.error('Error en la coneccion a al base de datos', error);
+    throw(error);
+});
+
 
 //settigns
 app.set('port', process.env.PORT || 3000)
