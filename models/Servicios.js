@@ -14,7 +14,7 @@ const serviciosSchema = new Schema({
         Empresa: {type: String, required: true},
         Usuario: {type: String, required: true},
         Telefono: {type: String, required: false},
-        Contacto: {type: String, required: false};
+        Contacto: {type: String, required: false},
         Cargo: {type: String, required: false},
         CorreoElctronico: {type: String, required: false},
     },
