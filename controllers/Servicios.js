@@ -1,26 +1,37 @@
 import model from '../models';
 
 export default {
-    add: async (res , req, next) =>{
+    add: async (req, res, next) =>{
         try {    
             const reg = await model.Servicios.create(req.body);
-            res.send(200).json(reg);
+            res.status(200).json(reg);
         } catch (error) {
             res.status(500).send({
                 message: 'Ocurrio un error'
             });
-            next(error)
+            next(error);
         }
     },
-    list: async (res, req, next) =>{
+    list: async (req,res, next) =>{
         try {
             const reg = await model.Servicios.find();
-            res.send(200).json(reg);
+            res.status(200).json(reg);
         } catch (error) {
             res.status(500).send({
                 message: 'Ocurrio un error'
             });
-            next(error)
+            next(error);
+        }
+    },
+    query: async(req, res, next) => {
+        try {
+            const reg = await model.Servicios.findOne({_id: req.query._id});
+            res.status(200).json(reg);
+        } catch (error) {
+            res.status(500).send({
+                message: 'Ocurrio un error'
+            });
+            next(error); 
         }
     }
 };

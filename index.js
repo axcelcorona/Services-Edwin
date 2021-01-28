@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import router from './routers';
 
 const app = express();
 
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/Serviciosdb', {useNewUrlParser: true
 });
 
 
+
 //settigns
 app.set('port', process.env.PORT || 3000)
 
@@ -25,7 +27,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 // app.use(express.static(path.join(__dirname,'public')));
-
+app.use('/api',router);
 
 app.listen(app.get('port'), ()=>{
     console.log(`Server on port ${app.get('port')}`)
