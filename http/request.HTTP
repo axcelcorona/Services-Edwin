@@ -1,0 +1,81 @@
+###listar api
+GET http://localhost:3000/api/servicios/list
+
+
+###
+POST  http://localhost:3000/api/servicios/add
+Content-Type: application/json
+
+{
+	"Servicios":{
+        "Problema": "Ratondo",
+        "Solucion": "Cambiar el teclado",
+        "Observacion": "EL no funciona",
+        "Fecha": "1-20-2000",
+        "HoraInicio": "2 pm",
+        "HoraFin": "4 pm"
+    },
+    "Clientes":{
+        "Empresa": "Casio",
+        "Usuario": "Dagmar",
+        "Telefono": "222222",
+        "Contacto": "brian",
+        "Cargo": "Gerente",
+        "CorreoElctronico": "asicadosiados"
+    },
+    "Personal":{
+        "Nomber": "Axcel",
+        "Celular": "1324325",
+        "CorreoElctronico": "axcelcoroan"
+    },
+    "Equipos":{
+        "TipoEquipo": "Tecalado",
+        "Descripcion": "EL teclado se jodio"
+    },
+    "Visita":{
+        "TipoVisita": "programada",
+        "Descripcion": "revicion general"
+    }
+}
+
+###actualizando 
+PUT http://localhost:3000/api/servicios/update?_id=6012fda2be5fd91e0092607b
+Content-Type: application/json
+
+{
+	"Servicios":{
+        "Problema": "hola",
+        "Solucion": "Cambiar el teclado",
+        "Observacion": "EL no funciona",
+        "Fecha": "1-20-2000",
+        "HoraInicio": "2 pm",
+        "HoraFin": "4 pm"
+    },
+    "Clientes":{
+        "Empresa": "Casio",
+        "Usuario": "Dagmar",
+        "Telefono": "222222",
+        "Contacto": "brian",
+        "Cargo": "Gerente",
+        "CorreoElctronico": "asicadosiados"
+    },
+    "Personal":{
+        "Nomber": "Axcel",
+        "Celular": "1324325",
+        "CorreoElctronico": "axcelcoroan"
+    },
+    "Equipos":{
+        "TipoEquipo": "Tecalado",
+        "Descripcion": "EL teclado se jodio"
+    },
+    "Visita":{
+        "TipoVisita": "programada",
+        "Descripcion": "revicion general"
+    },
+    "_id":"6012fda2be5fd91e0092607b"
+}
+
+
+###delete
+DELETE http://localhost:3000/api/servicios/delete?_id=6012fda2be5fd91e0092607b
+Content-Type: application/json

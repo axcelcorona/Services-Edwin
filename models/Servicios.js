@@ -3,7 +3,7 @@ import mongoose, {Schema} from 'mongoose';
 
 const serviciosSchema = new Schema({
     Servicios:{
-        Pronela: {type: String, required: true},
+        Problema: {type: String, required: true},
         Solucion: {type: String, required: true},
         Observacion: {type: String, required: true},
         Fecha: {type: Date, required: true},
