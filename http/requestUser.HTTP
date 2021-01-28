@@ -30,3 +30,9 @@ Content-Type: application/json
     "Contraseña": "345456",
     "_id":"601332442bfff72b78ebbe92"
 }
+
+
+
+###Delete to user
+DELETE http://localhost:3000/api/user/delete?_id=601332442bfff72b78ebbe92
+Content-Type: application/json

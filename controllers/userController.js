@@ -49,6 +49,17 @@ export default{
             });
             next(error);
         }
+    },
+    delete: async(req, res, next) => {
+        try {
+            const reg = await model.Usuario.findByIdAndDelete({_id: req.query._id});
+            res.status(200).json(reg);
+        } catch (error) {
+            res.status(500).send({
+                message: 'Ocurrio un error'
+            });
+            next(error);
+        }
     }
 
 };
