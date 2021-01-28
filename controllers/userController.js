@@ -23,6 +23,17 @@ export default{
             });
             next(error);
         }
+    },
+    query: async (req, res, next) => {
+        try {
+            const reg = await model.Usuario.findById({_id: req.query._id});
+            res.status(200).json(reg);
+        } catch (error) {
+            res.status(500).send({
+                message: 'Ocurrio un error'
+            });
+            next(error);
+        }
     }
 
 };

@@ -1,0 +1,20 @@
+###Add to a new User
+POST http://localhost:3000/api/user/add
+Content-Type: application/json
+
+{
+    "Nombre": "Axcel",
+    "CorreoElectronico": "axcelcorona01@gmail.com",
+    "Contraseña": "123123"
+}
+
+
+### list to User
+GET http://localhost:3000/api/user/list
+Content-Type: application/json
+
+
+
+### Listar un solo usuario
+GET http://localhost:3000/api/user/query
+Content-Type: application/json
