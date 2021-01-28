@@ -3,9 +3,9 @@ POST http://localhost:3000/api/user/add
 Content-Type: application/json
 
 {
-    "Nombre": "Axcel",
-    "CorreoElectronico": "axcelcorona01@gmail.com",
-    "Contraseña": "123123"
+    "Nombre": "dagmar",
+    "CorreoElectronico": "dagmarzolani@gmail.com",
+    "Contraseña": "juntosporsimpre"
 }
 
 
@@ -16,5 +16,17 @@ Content-Type: application/json
 
 
 ### Listar un solo usuario
-GET http://localhost:3000/api/user/query
+GET http://localhost:3000/api/user/query?_id=60132fc3de0cd406d078692d
 Content-Type: application/json
+
+
+###update to user
+PUT http://localhost:3000/api/user/update
+Content-Type: application/json
+
+{
+    "Nombre": "hjola",
+    "CorreoElectronico": "dasf",
+    "Contraseña": "345456",
+    "_id":"601332442bfff72b78ebbe92"
+}
